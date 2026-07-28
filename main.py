@@ -11,3 +11,5 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()  # FECHAR A JANELA
             quit()
+
+
