@@ -16,4 +16,16 @@ print(f"A idade da Mimi é {mimi.age}")
 print(f"A família da Mimi é {mimi.family}")
 print(f"Caramelo é um objeto de qual classe? {caramelo.__class__.__name__}")
 
-# acesso público e privado no python
+# acesso público e privado no python, modificadores de acesso são
+# diferentes de outras linguagens, não existem atributos verdadeiramente
+#trancados em python
+
+class ContaBancaria:
+    def __init__(self, titular, saldo :int):
+        self.titular = titular #Público
+        self._agencia = "0001" #Protegido (1 underline)
+        self.__saldo = saldo  #Privado (2 underlines)
+
+conta = ContaBancaria("Karol",1000)
+print(conta.titular)
+conta.titular = "Ana"
